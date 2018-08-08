@@ -1,10 +1,11 @@
 <?php
 
-class Task {
-  public $title;
-  public $description;
+class Task
+{
+  protected $title;
+  protected $description;
 
-  public $completed = false;
+  protected $completed = false;
 
   public function __construct($title, $description)
   {
@@ -16,9 +17,22 @@ class Task {
   {
     return $this->completed = true;
   }
+
+  public function getTask()
+  {
+    return $this->title . ' ' . $this->description;
+  }
+
+  public function setTitle($title)
+  {
+    if ($title == '') {
+      throw new Exception("Title can not be a empty");
+    }
+
+    $this->title = $title;
+  }
 }
 
 $task = new Task('Check OOP', 'Text');
-echo $task->title;
-echo $task->description;
-echo $task->complete();
+
+echo $task->getTask();
