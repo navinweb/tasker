@@ -2,6 +2,23 @@
 
 abstract class Shape {
   abstract protected function getArea();
+
+  public function check() {
+    return 'hui';
+  }
+}
+
+interface Test{
+  function lol();
+}
+
+interface Test2{
+  function lol();
+}
+
+
+class fuck extends Shape implements Test, Test2 {
+
 }
 
 class Square extends Shape {
