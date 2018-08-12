@@ -1,0 +1,15 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Business\\": "src"
+        }
+    },
+    "name": "root/business",
+    "authors": [
+        {
+            "name": "navinweb",
+            "email": "anatoliykirzo@gmail.com"
+        }
+    ],
+    "require": {}
+}
