@@ -4,6 +4,7 @@ class Math
 {
 
   public static $sum = 0;
+  public static $db = 'db instance';
 
   public static function add() {
     return array_sum(func_get_args());
@@ -16,6 +17,10 @@ class Math
   public static function addSum() {
     self::$sum += 1;
   }
+
+  public static function getDB() {
+    return self::$db;
+  }
 }
 
 $math = new Math;
@@ -25,6 +30,9 @@ $math = new Math;
 // echo Math::add(1,2,2,3);
 // echo Math::addAlternative(1,2,2,3);
 
-$math::addSum();
-Math::addSum();
-echo Math::$sum;
+// $math::addSum();
+// Math::addSum();
+// echo Math::$sum;
+
+// $db = Math::getDB();
+// echo $db;
